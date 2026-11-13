@@ -1,0 +1,13 @@
+# CosmoVar figure style.
+
+font.family: serif
+font.serif: Computer Modern
+text.usetex: True
+mathtext.fontset: cm
+
+xtick.top: True
+xtick.bottom: True
+xtick.direction: in
+ytick.left: True
+ytick.right: True
+ytick.direction: in

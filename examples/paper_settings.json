@@ -1,0 +1,664 @@
+{
+  "recovery": {
+    "1": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 500,
+      "nsteps": 400,
+      "nsamples_output": 2000,
+      "adaptive": true,
+      "target_thinned": 2000,
+      "step_chunk": 500,
+      "max_steps": 24000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnsigma_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-35.0, 26.0],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-4.605170186, 0.693147181],
+          "ln_tau": [-9.210340372, 13.815510558],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "2": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 500,
+      "nsteps": 400,
+      "nsamples_output": 2000,
+      "adaptive": true,
+      "target_thinned": 2000,
+      "step_chunk": 500,
+      "max_steps": 24000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnsigma_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-35.0, 26.0],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-4.605170186, 0.693147181],
+          "ln_tau": [-9.210340372, 9.210540372],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "3": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 500,
+      "nsteps": 400,
+      "nsamples_output": 2000,
+      "adaptive": true,
+      "target_thinned": 2000,
+      "step_chunk": 500,
+      "max_steps": 24000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-23.02585093, 10.59663473],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-10.0, 10.0],
+          "ln_tau": [-9.210340372, 13.815510558],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "4": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 500,
+      "nsteps": 400,
+      "nsamples_output": 2000,
+      "adaptive": true,
+      "target_thinned": 2000,
+      "step_chunk": 500,
+      "max_steps": 24000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-23.02585093, 9.210340372],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-10.0, 10.0],
+          "ln_tau": [0.0, 13.815510558],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "5": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 500,
+      "nsteps": 400,
+      "nsamples_output": 2000,
+      "adaptive": true,
+      "target_thinned": 2000,
+      "step_chunk": 500,
+      "max_steps": 24000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-35.0, 26.0],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-10.0, 10.0],
+          "ln_tau": [-6.0, 15.0],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    }
+  },
+  "observed": {
+    "1": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 1500,
+      "adaptive": true,
+      "target_thinned": 1500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "both",
+      "sampling_model": {
+        "label": "lnsigma_lntau_flat",
+        "prior_bounds_used": {
+          "m": [10.0, 25.0],
+          "ln_D": [-35.0, 26.0],
+          "ln_sigma2": [-20.0, 20.0],
+          "ln_sigma": [-4.605170186, 0.693147181],
+          "ln_tau": [-9.210340372, 13.815510558],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "5": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 1500,
+      "adaptive": true,
+      "target_thinned": 1500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "ln_D": [-35.0, 26.0],
+          "ln_tau": [-6.0, 15.0],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    }
+  },
+  "closure": {
+    "1": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 500,
+      "adaptive": true,
+      "target_thinned": 500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnsigma_lntau_flat",
+        "prior_bounds_used": {
+          "ln_sigma": [-4.605170185988091, 0.6931471805599453],
+          "ln_tau": [-9.210340371976184, 13.815510557964274],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "2": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 500,
+      "adaptive": true,
+      "target_thinned": 500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnsigma_lntau_flat",
+        "prior_bounds_used": {
+          "ln_sigma": [-4.605170185988091, 0.6931471805599453],
+          "ln_tau": [-9.210340371976184, 9.210540372],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "3": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 500,
+      "adaptive": true,
+      "target_thinned": 500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "ln_D": [-23.02585092994046, 10.59663473],
+          "ln_tau": [-9.210340372, 13.815510557964274],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "4": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 500,
+      "adaptive": true,
+      "target_thinned": 500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "ln_D": [-23.02585092994046, 9.210340371976184],
+          "ln_tau": [0.0, 13.815510557964274],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    },
+    "5": {
+      "seed": 123,
+      "nwalkers": 32,
+      "nburn": 200,
+      "nsteps": 400,
+      "nsamples_output": 500,
+      "adaptive": true,
+      "target_thinned": 500,
+      "step_chunk": 500,
+      "max_steps": 6000,
+      "mwin_mode": "cont",
+      "sampling_model": {
+        "label": "lnD_lntau_flat",
+        "prior_bounds_used": {
+          "ln_D": [-35.0, 26.0],
+          "ln_tau": [-6.0, 15.0],
+          "ln_jitter": [-18.420680743952364, 0.0]
+        }
+      },
+      "bands_fitted": ["Gaia_G"]
+    }
+  },
+  "calibration": {
+    "seed": 123,
+    "nwalkers": 32,
+    "nburn": 500,
+    "nsteps": 400,
+    "nsamples_output": 2000,
+    "adaptive": true,
+    "target_thinned": 2000,
+    "step_chunk": 500,
+    "max_steps": 24000,
+    "mwin_mode": "cont",
+    "sampling_model": {
+      "label": "lnD_lntau_flat",
+      "prior_bounds_used": {
+        "ln_D": [-35.0, 26.0],
+        "ln_tau": [-6.0, 15.0],
+        "ln_jitter": [-18.420680743952364, 0.0]
+      }
+    },
+    "bands_fitted": ["Gaia_G"]
+  },
+  "population": {
+    "seed": 42,
+    "band": "gaia_g",
+    "z_sampling": "uniform_z",
+    "input_box": {
+      "n_objects": 1250000,
+      "z_min": 0.5,
+      "z_max": 3.5,
+      "logl_min": 44.0,
+      "logl_max": 47.7
+    },
+    "truth": {
+      "H0": 67.4,
+      "Om0": 0.315,
+      "w0": -1.0,
+      "wa": 0.0,
+      "D_pivot": -4.49,
+      "d_D": -0.85,
+      "alpha_D": 2.51,
+      "log_sigma_int": -2.120263536200091,
+      "sigma_int": 0.12000000000000001,
+      "logL3000_pivot": 45.5,
+      "lambda_0": 3000.0,
+      "lambda_rf_fiducial_logl3000": 45.0,
+      "a_band": 88.92223400130564,
+      "m_win_scatter": "none; true_m_win is deterministic from z, logl3000, cosmology, SED, and K-correction",
+      "log10_d_scatter": "true_log10_d = true_log10_d_mean + Normal(0, true_sigma_int)"
+    },
+    "sed_setup": {
+      "sed_grid": "assets/sed/quasar_continuum_and_lines.npz",
+      "passband_file": "assets/passbands/gaia_g.dat",
+      "n_integration_wavelength": 1000
+    },
+    "analysis_defaults": {
+      "chunk_size": 25000
+    }
+  },
+  "_comment_stage2_selection": "Excluded sources tend to have shorter rest-frame baselines and fewer epochs.",
+  "stage2": {
+    "1": {
+      "cuts_submit": {
+        "z_min": 0.5,
+        "z_max": 3.5,
+        "logl_min": "-Infinity",
+        "logl_max": "Infinity",
+        "mag_max_mwin_cont": 20.0,
+        "tau_med_min_days": 10.0,
+        "min_epochs_gaia": 10,
+        "snr_min": "-Infinity",
+        "log10D_half68_max": "Infinity"
+      },
+      "cuts_stage2": {
+        "d50_min": -6.0,
+        "d50_max": -2.5,
+        "max_objects": null
+      },
+      "sampling": {
+        "warmup": 3000,
+        "samples": 1500,
+        "draw_stride": 2,
+        "draw_offset": 0,
+        "K_draws": null,
+        "nan_policy": "finite-paired-draws",
+        "min_finite_draws": 250,
+        "n_steps_z": 1024,
+        "target_accept_prob": 0.95,
+        "max_tree_depth": 11,
+        "sample_params": "Om0,w0,wa,D_pivot,d_D,log_sigma_int",
+        "likelihood_mode": "draw_mixture",
+        "parametrization": {
+          "wpiv": false,
+          "c_piv": null,
+          "z_piv": null,
+          "prior_mode": null,
+          "primary_w_parameter": "w0"
+        },
+        "fixed": {
+          "H0": 67.4,
+          "alpha_D": 2.51
+        },
+        "priors": {
+          "H0": [60.0, 80.0],
+          "Om0": [0.0, 1.0],
+          "w0": [-5.0, 1.0],
+          "wa": [-27.0, 7.0],
+          "D_pivot": [-20.0, 40.0]
+        },
+        "hyperpriors": {
+          "sig_hyp": 2.0,
+          "sig_alpha": 1.0,
+          "sig_ell": 1.0,
+          "logL3000_pivot": 45.5
+        }
+      },
+      "draw_offset": 0,
+      "chains": [
+        {
+          "chain_id": 1,
+          "seed": 22346
+        },
+        {
+          "chain_id": 2,
+          "seed": 22347
+        },
+        {
+          "chain_id": 3,
+          "seed": 22348
+        },
+        {
+          "chain_id": 4,
+          "seed": 22349
+        }
+      ]
+    },
+    "3": {
+      "cuts_submit": {
+        "z_min": 0.5,
+        "z_max": 3.5,
+        "logl_min": "-Infinity",
+        "logl_max": "Infinity",
+        "mag_max_mwin_cont": 20.0,
+        "tau_med_min_days": 10.0,
+        "min_epochs_gaia": 10,
+        "snr_min": "-Infinity",
+        "log10D_half68_max": "Infinity"
+      },
+      "cuts_stage2": {
+        "d50_min": -6.0,
+        "d50_max": -2.5,
+        "max_objects": null
+      },
+      "sampling": {
+        "warmup": 3000,
+        "samples": 1500,
+        "draw_stride": 2,
+        "draw_offset": 0,
+        "K_draws": null,
+        "nan_policy": "finite-paired-draws",
+        "min_finite_draws": 250,
+        "n_steps_z": 1024,
+        "target_accept_prob": 0.95,
+        "max_tree_depth": 11,
+        "sample_params": "Om0,w0,wa,D_pivot,d_D,log_sigma_int",
+        "likelihood_mode": "draw_mixture",
+        "parametrization": {
+          "wpiv": false,
+          "c_piv": null,
+          "z_piv": null,
+          "prior_mode": null,
+          "primary_w_parameter": "w0"
+        },
+        "fixed": {
+          "H0": 67.4,
+          "alpha_D": 2.51
+        },
+        "priors": {
+          "H0": [60.0, 80.0],
+          "Om0": [0.0, 1.0],
+          "w0": [-5.0, 1.0],
+          "wa": [-27.0, 7.0],
+          "D_pivot": [-20.0, 40.0]
+        },
+        "hyperpriors": {
+          "sig_hyp": 2.0,
+          "sig_alpha": 1.0,
+          "sig_ell": 1.0,
+          "logL3000_pivot": 45.5
+        }
+      },
+      "draw_offset": 0,
+      "chains": [
+        {
+          "chain_id": 1,
+          "seed": 22346
+        },
+        {
+          "chain_id": 2,
+          "seed": 22347
+        },
+        {
+          "chain_id": 3,
+          "seed": 22348
+        },
+        {
+          "chain_id": 4,
+          "seed": 22349
+        }
+      ]
+    },
+    "4": {
+      "cuts_submit": {
+        "z_min": 0.5,
+        "z_max": 3.5,
+        "logl_min": "-Infinity",
+        "logl_max": "Infinity",
+        "mag_max_mwin_cont": 20.0,
+        "tau_med_min_days": 10.0,
+        "min_epochs_gaia": 10,
+        "snr_min": "-Infinity",
+        "log10D_half68_max": "Infinity"
+      },
+      "cuts_stage2": {
+        "d50_min": -6.0,
+        "d50_max": -2.5,
+        "max_objects": null
+      },
+      "sampling": {
+        "warmup": 3000,
+        "samples": 1500,
+        "draw_stride": 2,
+        "draw_offset": 0,
+        "K_draws": null,
+        "nan_policy": "finite-paired-draws",
+        "min_finite_draws": 250,
+        "n_steps_z": 1024,
+        "target_accept_prob": 0.95,
+        "max_tree_depth": 11,
+        "sample_params": "Om0,w0,wa,D_pivot,d_D,log_sigma_int",
+        "likelihood_mode": "draw_mixture",
+        "parametrization": {
+          "wpiv": false,
+          "c_piv": null,
+          "z_piv": null,
+          "prior_mode": null,
+          "primary_w_parameter": "w0"
+        },
+        "fixed": {
+          "H0": 67.4,
+          "alpha_D": 2.51
+        },
+        "priors": {
+          "H0": [60.0, 80.0],
+          "Om0": [0.0, 1.0],
+          "w0": [-5.0, 1.0],
+          "wa": [-27.0, 7.0],
+          "D_pivot": [-20.0, 40.0]
+        },
+        "hyperpriors": {
+          "sig_hyp": 2.0,
+          "sig_alpha": 1.0,
+          "sig_ell": 1.0,
+          "logL3000_pivot": 45.5
+        }
+      },
+      "draw_offset": 0,
+      "chains": [
+        {
+          "chain_id": 1,
+          "seed": 22346
+        },
+        {
+          "chain_id": 2,
+          "seed": 22347
+        },
+        {
+          "chain_id": 3,
+          "seed": 22348
+        },
+        {
+          "chain_id": 4,
+          "seed": 22349
+        }
+      ]
+    },
+    "5": {
+      "cuts_submit": {
+        "z_min": 0.5,
+        "z_max": 3.5,
+        "logl_min": "-Infinity",
+        "logl_max": "Infinity",
+        "mag_max_mwin_cont": 20.0,
+        "tau_med_min_days": 10.0,
+        "min_epochs_gaia": 10,
+        "log10D_half68_max": "Infinity"
+      },
+      "cuts_stage2": {
+        "d50_min": -6.0,
+        "d50_max": -2.5,
+        "max_objects": null
+      },
+      "sampling": {
+        "warmup": 3000,
+        "samples": 1500,
+        "draw_stride": 2,
+        "K_draws": null,
+        "nan_policy": "finite-paired-draws",
+        "min_finite_draws": 250,
+        "n_steps_z": 1024,
+        "target_accept_prob": 0.95,
+        "max_tree_depth": 11,
+        "sample_params": "Om0,w0,wa,D_pivot,d_D,log_sigma_int",
+        "likelihood_mode": "draw_mixture",
+        "fixed": {
+          "H0": 67.4,
+          "alpha_D": 2.51
+        },
+        "priors": {
+          "H0": [60.0, 80.0],
+          "Om0": [0.0, 1.0],
+          "w0": [-5.0, 1.0],
+          "wa": [-27.0, 7.0],
+          "D_pivot": [-20.0, 40.0]
+        },
+        "hyperpriors": {
+          "sig_hyp": 2.0,
+          "sig_alpha": 1.0,
+          "sig_ell": 1.0,
+          "logL3000_pivot": 45.5
+        }
+      },
+      "draw_offset": 0,
+      "chains": [
+        {
+          "chain_id": 1,
+          "seed": 22346
+        },
+        {
+          "chain_id": 2,
+          "seed": 22347
+        },
+        {
+          "chain_id": 3,
+          "seed": 22348
+        },
+        {
+          "chain_id": 4,
+          "seed": 22349
+        }
+      ]
+    }
+  },
+  "selection": {
+    "z_min": 0.5,
+    "z_max": 3.5,
+    "mag_max": 20.0,
+    "min_epochs_gaia": 10,
+    "min_finite_draws": 1000
+  },
+  "matching": {
+    "all_targets": true,
+    "require_all_matched": true,
+    "no_mock_raw_mag_cut": true,
+    "min_epochs": 10,
+    "selection_seed": 20260514,
+    "tau_log10_mu": 2.8750612633917,
+    "tau_log10_sigma": 0.35,
+    "tau_min_days": 100.0,
+    "tau_max_days": 10000.0,
+    "match_k_initial": 64,
+    "match_k_step": 1024,
+    "match_k_max": 65536,
+    "anchor_mode": "conditional_mwin_stochastic_m0"
+  },
+  "simulation_seeds": {
+    "calibration": {
+      "tau_seed": 20260515,
+      "lightcurve_seed": 20260516,
+      "mwin_cont_seed": 20260517
+    },
+    "closure": {
+      "tau_seed": 20260615,
+      "lightcurve_seed": 20260616,
+      "mwin_cont_seed": 20260617
+    }
+  }
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+type: software
+license: MIT
+title: "CosmoVar"
+version: "1.0.0"
+authors:
+  - family-names: "Laguna-Miralles"
+    given-names: "Júlia"
+  - family-names: "Belokurov"
+    given-names: "Vasily"
+  - family-names: "Cranmer"
+    given-names: "Miles"
+preferred-citation:
+  type: article
+  title: "A hierarchical Bayesian framework for cosmology using Type 1 AGN variability"
+  authors:
+    - family-names: "Laguna-Miralles"
+      given-names: "Júlia"
+    - family-names: "Belokurov"
+      given-names: "Vasily"
+    - family-names: "Cranmer"
+      given-names: "Miles"
+  year: 2026
+  doi: "10.48550/arXiv.2606.28501"
+  url: "https://arxiv.org/abs/2606.28501"

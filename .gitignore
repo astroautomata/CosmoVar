@@ -1,0 +1,62 @@
+# Keep full numerical products out of Git.
+/results/
+/*.tar
+/*.tar.*
+!/compact_plot_data.tar.gz
+!/compact_plot_data.tar.gz.sha256
+/*.zip
+/*.sif
+/*.sif.sha256
+/SHA256SUMS
+/apptainer-sandbox/
+
+# Rebuilt figures and local environments.
+/.venv/
+/.mplconfig/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Local verification logs and temporary outputs.
+/.verification/
+
+# Local development records.
+/FILENAME_MAP.md
+/DEVELOPMENT_NOTES.md
+/source_file_map.tsv
+
+/plot_data/
+
+/reanalysis_checksums.sha256
+/zenodo_checksums.sha256
+/reanalysis/
+
+# Upstream survey inputs supplied by the user.
+/external_data/
+
+# Large numerical products are provided through Zenodo rather than GitHub.
+# Downloaded archives, extracted data and associated checksums.
+/zenodo/*.tar
+/zenodo/*.tar.*
+/zenodo/*.zip
+/zenodo/cosmology_closure_parent_population.npz
+/zenodo/results/
+/zenodo/external_data/
+/zenodo/zenodo_checksums.sha256
+
+# Built environments and generated figure products.
+/build/
+/figures/*
+!/figures/graphical_model.tex
+!/figures/graphical_model.svg
+!/figures/closure_workflow.svg
+!/figures/graphical_model.pdf
+!/figures/figure_02_observed_sample.pdf
+!/figures/figure_03_prior_sensitivity.pdf
+!/figures/figure_04_observed_and_simulated.pdf
+!/figures/figure_05_short_lag_calibration.pdf
+!/figures/figure_06_cosmology_closure.pdf
+!/figures/psd_steepening.pdf
+
+# Private verification suite.
+/tests/

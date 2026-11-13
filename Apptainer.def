@@ -1,0 +1,57 @@
+Bootstrap: docker
+From: python@sha256:13cc673c11ee90d6ba92d95f35f4d8e59148937f1e3b4044788e93268bfe9d2e
+
+%files
+    code /opt/agn/code
+    assets /opt/agn/assets
+    figures /opt/agn/figures
+    requirements.txt /opt/agn/requirements.txt
+    LICENSE /opt/agn/LICENSE
+    matplotlibrc /opt/agn/matplotlibrc
+    zenodo/producer_inputs.tsv /opt/agn/zenodo/producer_inputs.tsv
+    zenodo/reanalysis_inputs.tsv /opt/agn/zenodo/reanalysis_inputs.tsv
+    zenodo/archives.tsv /opt/agn/zenodo/archives.tsv
+    zenodo/figure_analysis_inputs.tsv /opt/agn/zenodo/figure_analysis_inputs.tsv
+    zenodo/light_curve_inputs.tsv /opt/agn/zenodo/light_curve_inputs.tsv
+
+%post
+    mkdir -p /opt/agn/zenodo/results /opt/agn/figures
+    apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        cm-super \
+        dvipng \
+        ghostscript \
+        texlive-fonts-recommended \
+        texlive-latex-base \
+        texlive-latex-extra \
+        texlive-latex-recommended
+    rm -rf /var/lib/apt/lists/*
+    python -m pip install --no-cache-dir -r /opt/agn/requirements.txt
+    python -m pip check
+
+%environment
+    export OPENBLAS_NUM_THREADS=1
+    export OMP_NUM_THREADS=1
+    export MKL_NUM_THREADS=1
+    export NUMEXPR_NUM_THREADS=1
+    export PYTHONDONTWRITEBYTECODE=1
+    export MPLBACKEND=Agg
+    export JAX_PLATFORMS=cpu
+    export JAX_ENABLE_X64=true
+    export PYTHONPATH=/opt/agn/code
+
+%runscript
+    cd /opt/agn
+    exec python code/reproduce_figures.py "$@"
+
+%test
+    cd /opt/agn
+    PYTHONPYCACHEPREFIX=/tmp/agn-pycache python -m py_compile /opt/agn/code/*.py /opt/agn/code/framework/*.py /opt/agn/code/plotting/*.py
+    python /opt/agn/code/reproduce_figures.py --help >/dev/null
+    python /opt/agn/code/verify_data.py --help >/dev/null
+    latex --version >/dev/null
+
+%labels
+    org.opencontainers.image.title CosmoVar
+    org.opencontainers.image.description "CPU environment for reproducing the final-paper figures"
+    org.opencontainers.image.python "3.10.12"
